@@ -1,5 +1,5 @@
 # Mobile Phonegap App
-## Bootstrap Project
+### Bootstrap Project
 Copyright 2014, G. Nicolas Arroyo
 
 ### Skill
@@ -12,12 +12,16 @@ Backbone
 Gulp
 
 ### Install
-1. Clone repository in your dir
-'git clone https://github.com/gnicolasarroyo/bp-mobile-phonegap-app.git my-dir'
+#### 1. Clone repository in your dir
+```
+git clone https://github.com/gnicolasarroyo/bp-mobile-phonegap-app.git my-dir
+```
 
-2. Configure package.json
+#### 2. Configure package.json
 
-3. Run
-'npm install'
-'gulp init'
-'gull'
+#### 3. Run
+```
+npm install
+gulp init
+gull
+```
