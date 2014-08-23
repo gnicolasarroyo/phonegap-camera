@@ -12,7 +12,7 @@ Backbone
 Gulp
 
 ### Install
-#### 1. Clone repository in your dir
+#### 1. Clone repository
 ```
 git clone https://github.com/gnicolasarroyo/bp-mobile-phonegap-app.git my-dir
 ```
@@ -23,5 +23,9 @@ git clone https://github.com/gnicolasarroyo/bp-mobile-phonegap-app.git my-dir
 ```
 npm install
 gulp init
-gull
+gulp
 ```
+
+#### 4. Configure www/config.xml
+
+#### 5. Compress the www directory and load in into phonegap build 
