@@ -1,13 +1,13 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "homepage": "",
+  "name": "phonegap.camera",
+  "version": "0.0.1",
+  "description": "Using plugin Cordova Camera.",
+  "homepage": "https://github.com/gnicolasarroyo",
   "author": {
-    "name": "",
-    "site": ""
+    "name": "G. Nicolas Arroyo <g.nicolas.arroyo@gmail.com>",
+    "site": "https://twitter.com/gnicoarr"
   },
-  "license": "",
+  "license": "MIT",
   "devDependencies": {
     "gulp"        : "*",
     "gulp-coffee" : "*",

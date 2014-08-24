@@ -6,7 +6,7 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
     <link rel="stylesheet" type="text/css" href="assets/css/jquery.mobile-1.4.3.min.css">
     <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery.mobile-1.4.3.min.js"></script>
@@ -15,17 +15,52 @@
   </head>
   <body>
 
-    <!-- Welcome 
+    <!-- Pages
     =========================-->
-    <div data-role="page">
+    <div data-role="page" id="pictures-page">
       <div data-role="header">
-        <h1>Bootstrap Projects</h1>
+        <h1>Phonegap Camera</h1>
       </div>
       <div role="main" class="ui-content">
-        <h1>Mobile Phonegap App</h1>
-        <h3>If you can see this, you are ready to go!</h3>
+        <h1>Pictures</h1>
+        <button class="ui-btn" id="btn-take-picture">
+          Take a Picture
+        </button>
+        <ul data-role="listview" data-inset="true" id="picture-list-wrapper">
+        </ul>
       </div>
     </div>
+
+    <div data-role="page" id="picture-page">
+      <div data-role="header">
+        <a href="#demo-intro" data-rel="back" data-icon="arrow-l" data-iconpos="notext" data-shadow="false" data-icon-shadow="false">Back</a>
+        <h1>Phonegap Camera</h1>
+      </div>
+      <div role="main" class="ui-content">
+        <h1>Picture</h1>
+          <div id="picture-detail-wrapper"></div>
+      </div>
+    </div>
+
+    <!-- Templates
+    ==========================-->
+    <script type="text/template" id="picture-list">
+      <% for (var i = 0, j = collection.length; i < j; i++) { %>
+        <% if (i === 0) { %> <li class="ui-li-has-thumb ui-first-child"> <% }; %>
+        <% if (i === (j - 1)) { %> <li class="ui-li-has-thumb ui-last-child"> <% }; %>
+        <% if (i !== 0 && i !== (j - 1)) { %> <li class="ui-li-has-thumb"> <% }; %>
+          <a href="#picture-page" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+            <img src="<%= collection[i].image_data %>">
+            <h2><%= collection[i].date.toLocaleString() %></h2>
+          </a>
+        </li>
+      <% }; %>
+    </script>
+
+    <script type="text/template" id="picture-detail">
+      <img src="<%= model.image_data %>">
+      <h2><%= model.date %></h2>
+    </script>
 
     <!-- Scripts
     ==========================-->

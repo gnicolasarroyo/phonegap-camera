@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.company.appname" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>App Name</name>
+    <name>Phonegap Camera</name>
     <description>
-        App description.
+        Using plugin Cordova Camera.
     </description>
-    <author email="support@company.com" href="http://company.com">
-        Company Team
+    <author email="g.nicolas.arroyo@gmail.com" href="https://twitter.com/gnicoarr">
+        G. Nicolas Arroyo
     </author>
     
     <!-- Preferences
@@ -28,10 +28,10 @@
     <preference name="android-installLocation" value="auto" />
     -->
     
+    <gap:plugin name="org.apache.cordova.camera" />
     <!-- Cordova Plugins
     ====================
     <gap:plugin name="org.apache.cordova.battery-status" />
-    <gap:plugin name="org.apache.cordova.camera" />
     <gap:plugin name="org.apache.cordova.media-capture" />
     <gap:plugin name="org.apache.cordova.console" />
     <gap:plugin name="org.apache.cordova.contacts" />
